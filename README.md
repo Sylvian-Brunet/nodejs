@@ -39,4 +39,4 @@ module.exports = {
  - npm install express
 
  Now you can dev !
- check my files for more.
+ check my files for more. If you dl my files, make a ``npm install`` in the directory.
