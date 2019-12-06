@@ -44,13 +44,20 @@ module.exports = {
  - npm install express
  - npm install dotenv
  - create file .env
+ - npm install mongoose (only if you are using mongoDB as database)
  
 For build your project, you can :
  - run `npm run build` for build once
  - run `npm run watch` for rebuild automatically when files change.
 
-For database, download mongoDB here : https://www.mongodb.com/download-center/community?jmp=docs (version 4.2.1, OS, ZIP)
-Put it on your program Files Directory, in a new directory MongoDB.
+For database, download mongoDB here : 
+````
+https://www.mongodb.com/download-center/community?jmp=docs
+````
+Put it on your program Files Directory, in a new directory MongoDB. 
+For managing your mongoDB database, use compass. download here : 
+````
+https://www.mongodb.com/download-center/compass
+````
 
- Now you can dev !
- check my files for more. If you dl my files, make a `npm install` in the directory.
+ Now you can dev ! after download files, make a `npm install` in the directory.
