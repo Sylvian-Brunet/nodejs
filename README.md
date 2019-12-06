@@ -45,7 +45,7 @@ module.exports = {
 ````
  - npm install express
  - npm install dotenv
- - create directory .env
+ - create file .env
 
  Now you can dev !
  check my files for more. If you dl my files, make a ``npm install`` in the directory.

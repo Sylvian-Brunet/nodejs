@@ -3,10 +3,9 @@ import express from 'express'
 export default () => {
     try {
         const app = express();
-        const port = 3000;
 
-        app.listen(port, () => {
-            console.log('nodejs here !');
+        app.listen(process.env.PORT, () => {
+            console.log(process.env.PORT, process.env.NODE_ENV);
         });
     } catch (e) {
         console.error(e);
