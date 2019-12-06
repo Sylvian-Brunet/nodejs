@@ -7,24 +7,31 @@ tips : dont do it on a USB Key, it'll take so much more time to install
  - create directory src
  - create file index.js in src (write in a `console.log('test');` for some test)
  - npm install --save-dev webpack app-root-path webpack-cli
- - add dans package.json, in `"script"` = `"build": "webpack --mode=development"`
+ - add in package.json, in `"script"` = `"build": "webpack --mode=development"`
  - create file webpack.config.js
  - insert inside : 
  ````
-const root = require('app-root-path').path;
+const root = require('app-root-path').path
+const dotenv = require('dotenv').config({ path: `${root}/.env` });
+const DefinePlugin = require('webpack').DefinePlugin
 
 module.exports = {
-   entry: `./src/index.js`,
-   target: `node`,
-   externals: [
-       /^[a-z\-0-9]+$/
-   ],
-   output: {
-       filename: `index.js`,
-       path: `${root}/dist`,
-       libraryTarget: "commonjs"
-   }
-};
+    entry: `./index.js`,
+    target: 'node',
+    externals: [
+        /^[a-z\-0-9]+$/ // Ignore node_modules folder
+    ],
+    output: {
+        filename: 'index.js',
+        path: `${root}/dist`,
+        libraryTarget: "commonjs"
+    },
+    plugins: [
+        new DefinePlugin({
+            "process.env": dotenv.parsed
+        })
+    ]
+}
 ````
  - npm run build
  - add in `"script"` in package.json = `"watch": "webpack --mode=development --watch"`
@@ -38,6 +45,7 @@ module.exports = {
 ````
  - npm install express
  - npm install dotenv
+ - create directory .env
 
  Now you can dev !
  check my files for more. If you dl my files, make a ``npm install`` in the directory.
