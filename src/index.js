@@ -2,11 +2,11 @@ import express from 'express'
 import routes from './routes'
 import initdb from './db'
 
-export default () => {
+export default async () => {
     try {
         const app = express();
 
-        initdb();
+        await initdb();
         routes(app);
 
         app.listen(process.env.PORT, () => {
