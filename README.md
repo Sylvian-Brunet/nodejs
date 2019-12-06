@@ -37,6 +37,7 @@ module.exports = {
 "watch:server": "nodemon --inspect=9223 \"./dist/index.js\" --watch \"./dist\""
 ````
  - npm install express
+ - npm install dotenv
 
  Now you can dev !
  check my files for more. If you dl my files, make a ``npm install`` in the directory.
