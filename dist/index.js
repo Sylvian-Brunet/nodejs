@@ -106,7 +106,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (() => {\r\n    try {\r\n        const app = express__WEBPACK_IMPORTED_MODULE_0___default()();\r\n\r\n        app.listen(3000, () => {\r\n            console.log(3000, \"development\");\r\n        });\r\n    } catch (e) {\r\n        console.error(e);\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./routes */ \"./src/routes/index.js\");\n\r\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (() => {\r\n    try {\r\n        const app = express__WEBPACK_IMPORTED_MODULE_0___default()();\r\n        Object(_routes__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(app);\r\n\r\n        app.listen(3000, () => {\r\n            console.log(3000, \"development\");\r\n        });\r\n    } catch (e) {\r\n        console.error(e);\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/routes/index.js":
+/*!*****************************!*\
+  !*** ./src/routes/index.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ((app) => {\r\n    // nos routes\r\n    app.get('/', () => {\r\n        console.log('trying to access routes /');\r\n    })\r\n});\n\n//# sourceURL=webpack:///./src/routes/index.js?");
 
 /***/ }),
 

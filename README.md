@@ -46,6 +46,8 @@ module.exports = {
  - npm install express
  - npm install dotenv
  - create file .env
+ 
+ - Run `npm run watch` for launch the serv.
 
  Now you can dev !
- check my files for more. If you dl my files, make a ``npm install`` in the directory.
+ check my files for more. If you dl my files, make a `npm install` in the directory.
