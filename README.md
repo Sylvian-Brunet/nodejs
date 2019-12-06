@@ -33,9 +33,7 @@ module.exports = {
     ]
 }
 ````
- - npm run build
  - add in `"script"` in package.json = `"watch": "webpack --mode=development --watch"`
- - npm run watch (for rebuild automatically)
  - npm install --save-dev npm-run-all nodemon
  - in package.json, in `"script"`, replace `"watch": "webpack --mode=development --watch"` by : 
 ````
@@ -47,7 +45,12 @@ module.exports = {
  - npm install dotenv
  - create file .env
  
- - Run `npm run watch` for launch the serv.
+For build your project, you can :
+ - run `npm run build` for build once
+ - run `npm run watch` for rebuild automatically when files change.
+
+For database, download mongoDB here : https://www.mongodb.com/download-center/community?jmp=docs (version 4.2.1, OS, ZIP)
+Put it on your program Files Directory, in a new directory MongoDB.
 
  Now you can dev !
  check my files for more. If you dl my files, make a `npm install` in the directory.
