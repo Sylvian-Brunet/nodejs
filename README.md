@@ -45,6 +45,7 @@ module.exports = {
  - npm install dotenv
  - create file .env
  - npm install mongoose (only if you are using mongoDB as database)
+ - npm install body-parser
  
 For build your project, you can :
  - run `npm run build` for build once
