@@ -84,7 +84,7 @@ export default (app) => {
         }
     });
 
-    //GET all comments by product_id
+    //GET all comments by product_code
     app.get('/comments/:product_code', async (req,res) => {
         const product_code = req.params.product_code;
         try {
@@ -99,7 +99,7 @@ export default (app) => {
         }
     });
 
-    //POST one comment by product_id
+    //POST one comment by product_code
     app.post('/comment/:product_code', async (req,res) => {
         try {
             const {title, text, date} = req.body;
