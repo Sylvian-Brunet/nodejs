@@ -2,6 +2,7 @@ import express from 'express'
 import routes from './routes'
 import initdb from './db'
 import bodyParser from 'body-parser'
+import cors from 'cors'
 
 export default async () => {
     try {
@@ -9,6 +10,7 @@ export default async () => {
 
         await initdb();
         app.use(bodyParser.urlencoded({extended: true}));
+        app.use(cors());
         routes(app);
 
         app.listen(process.env.PORT, () => {

@@ -62,6 +62,20 @@ export default (app) => {
         }
     });
 
+    //GET all comments
+    app.get('/comments', async (req, res) => {
+        try {
+            const comments = await commentModel.find();
+            res.status(200).json(comments);
+        } catch (err){
+            console.log(err.message);
+            return res.status(500).json({
+                'error': true,
+                'message': 'Error resquesting products !'
+            })
+        }
+    });
+
     //GET one comment by comment_id
     app.get('/comment/:comment_id', async (req,res) => {
         const commentId = req.params.comment_id;
